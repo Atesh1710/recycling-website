@@ -66,7 +66,6 @@ export default function HomePage() {
 
       {/* 3D Model Section */}
       <section className="py-16 px-4 bg-gray-800 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">3D Showcase of Metal Ingots</h2>
         <MetalShowcase/>
       </section>
 
