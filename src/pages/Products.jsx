@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import PageWrapper from "../components/PageWrapper";
 import "slick-carousel/slick/slick.css"; 
@@ -102,9 +103,9 @@ export default function Products() {
           Ready to Source Sustainable Materials?
         </motion.h2>
         <p className="mb-6">Contact us today to discuss your requirements and get customized solutions tailored to your industry.</p>
-        <button className="bg-white text-emerald-600 font-semibold py-2 px-6 rounded-xl hover:bg-gray-200">
+       <Link to='/contact'><button className="bg-white text-emerald-600 font-semibold py-2 px-6 rounded-xl hover:bg-gray-200">
           Get in Touch
-        </button>
+        </button></Link>
       </section>
     </PageWrapper>
   );
