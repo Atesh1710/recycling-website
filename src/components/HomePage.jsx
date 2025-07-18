@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
+import aluminiumMeltingWallpaper from '../assets/aluminiumMeltingWallpaper.mp4'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, TorusKnot, Stars, Environment } from '@react-three/drei';
 import MetalShowcase from './MetalShowCse';
@@ -22,7 +23,7 @@ export default function HomePage() {
           autoPlay
           loop
           muted
-          src="https://res.cloudinary.com/drnxntvrq/video/upload/v1752775669/recycling-background_vbl65i.mp4"
+          src={aluminiumMeltingWallpaper}
         />
         <div className="relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
