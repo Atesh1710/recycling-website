@@ -8,7 +8,7 @@ function AluminiumIngot() {
   useFrame(() => {
     if (meshRef.current) {
       meshRef.current.rotation.y += 0.01;
-      meshRef.current.rotation.x += 0.005;  // slight tilt for 3D effect
+      meshRef.current.rotation.x += 0.005; 
     }
   });
 
@@ -16,7 +16,7 @@ function AluminiumIngot() {
     <mesh ref={meshRef} rotation={[Math.PI, 0, 0]} scale={1.5}>
       {/* bottom radius smaller to form pot shape */}
       <cylinderGeometry args={[0.8, 0.6, 1, 64]} />
-      <meshStandardMaterial color="#c0c0c0" metalness={1} roughness={0.3} />
+      <meshStandardMaterial color="#c0c0c0" metalness={1} roughness={0.1} />
     </mesh>
   );
 }
