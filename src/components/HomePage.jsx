@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, TorusKnot, Stars, Environment } from '@react-three/drei';
 import MetalShowcase from './MetalShowCse';
@@ -30,9 +31,9 @@ export default function HomePage() {
           <p className="text-lg md:text-2xl mb-6">
             Sustainable Aluminium & Iron Casting | Plastic Granules
           </p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-xl">
+          <Link to='/about'><button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-xl">
             Explore Our Process
-          </button>
+          </button></Link>
         </div>
       </section>
 
@@ -83,9 +84,9 @@ export default function HomePage() {
       <section className="py-16 px-4 text-center bg-gray-800">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">Contact Us</h2>
         <p>Get in touch with us for partnerships or more information about our sustainable solutions.</p>
-        <button className="mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2 px-6 rounded-xl">
+        <Link to='/contact'><button className="mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2 px-6 rounded-xl">
           Contact Now
-        </button>
+        </button></Link>
       </section>
 
       <footer className="bg-gray-900 text-center py-6">

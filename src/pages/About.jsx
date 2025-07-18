@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import TeamMemberModal from '../components/TeamMemberModal';
 import PageWrapper from "../components/PageWrapper";
+import yogeshPic from  '../assets/yogeshPic.jpg';
+import parthPic from '../assets/parthPic.jpg'
 
 export default function About() {
+  const [selectedMember, setSelectedMember] = useState(null);
   return (
     <PageWrapper>
       {/* Hero Section */}
@@ -62,7 +68,7 @@ export default function About() {
           <Section title="Meet Our Team" bg="bg-transparent" textColor="text-white">
             <div className="flex flex-wrap justify-center gap-8">
               {team.map((member, idx) => (
-                <motion.div key={idx} whileHover={{ scale: 1.05 }} className="bg-white p-4 rounded-lg shadow text-center w-60">
+                <motion.div key={idx} whileHover={{ scale: 1.05 }} className="bg-white p-4 rounded-lg shadow text-center w-60" onClick={() => setSelectedMember(member)}>
                   <img src={member.photo} alt={member.name} className="w-24 h-24 mx-auto rounded-full mb-4" />
                   <h4 className="text-lg font-semibold text-gray-800">{member.name}</h4>
                   <p className="text-sm text-gray-600">{member.role}</p>
@@ -70,6 +76,8 @@ export default function About() {
               ))}
             </div>
           </Section>
+          {/* Modal */}
+      <TeamMemberModal member={selectedMember} onClose={() => setSelectedMember(null)} />
 
           {/* Testimonials */}
           <Section title="What Our Partners Say" bg="bg-transparent" textColor="text-white">
@@ -106,9 +114,11 @@ export default function About() {
 
       {/* CTA */}
       <Section title="Partner with Us for a Sustainable Future">
+        <Link to='/contact'>
         <button className="mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2 px-6 rounded-xl">
           Contact Us
         </button>
+        </Link>
       </Section>
 
     </PageWrapper>
@@ -174,9 +184,12 @@ const processSteps = [
 ];
 
 const team = [
-  { name: "Rajesh Mehra", role: "Founder & CEO", photo: "https://via.placeholder.com/150" },
-  { name: "Sneha Patel", role: "Head of Sustainability", photo: "https://via.placeholder.com/150" },
-  { name: "Amit Kumar", role: "Chief Technology Officer", photo: "https://via.placeholder.com/150" }
+  { name: "Parth Patel", role: "Chairman", photo: parthPic, details: "Parth oversees the strategic direction of the company with a focus on sustainability.",email: "parth.patel@example.com",
+    phone: "+91 9770204740",linkedin:"https://www.linkedin.com/in/parth-patel-b397082b5/" },
+  { name: "Yogesh Kapse", role: "Director", photo: yogeshPic, details: "Yogesh drives innovation in recycling processes and technology deployment.",  email: "yogesh.kapse@example.com",
+    phone: "+91 6265601919", linkedin:"https://www.linkedin.com/in/yogesh-kapse-b397082b5/" },
+  { name: "Dhayay Patel", role: "Mananging Director", photo: "https://via.placeholder.com/150", details: "Dhayay ensures operational excellence and community engagement.",  email: "dhayay.patel@example.com",
+    phone: "+91 1111111111", linkedin:"https://www.linkedin.com/in/dhayay-patel-b397082b5/" }
 ];
 
 const testimonials = [
