@@ -39,7 +39,7 @@ export default function AboutSection() {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-gray-700 text-sm bg-white p-4 rounded-lg shadow-inner mb-4"
+              className="text-white text-sm bg-gray-700 p-4 rounded-lg shadow-inner mb-4"
             >
               Keeping in mind the environmental challenges we face daily and their negative implications on our dearest planet Earth, as in our rich Vedic culture, we consider Earth as God or deity. We pray to the earth in our shlokas, that's why our founder Mr. Dhyey Patel always wanted to do what is right and sustainable along with developing society. 
               <br /><br />
