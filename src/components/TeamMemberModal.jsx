@@ -17,12 +17,13 @@ export default function TeamMemberModal({ member, onClose }) {
           ✖
         </button>
         <img src={member.photo} alt={member.name} className="w-24 h-24 rounded-full mx-auto mb-4" />
-        <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-        <p className="text-sm text-gray-600 mb-4">{member.role}</p>
+        <h3 className="text-xl font-semibold mb-2 text-black">{member.name}</h3>
+        <p className="text-sm text-gray-800 mb-4">{member.role}</p>
         <p className="text-gray-700 text-sm">
           {/* Example detail, you can expand this */}
           {member.details || "More information about the team member will appear here."}
         </p>
+        <hr className="my-4 border-gray-300"/>
         <p className="text-sm text-gray-600">
   <strong>Email:</strong> <a href={`mailto:${member.email}`} className="text-accent">{member.email}</a>
 </p>
