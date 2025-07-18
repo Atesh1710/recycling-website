@@ -7,7 +7,7 @@ import ProductSection from "../components/ProductSection";
 export default function Home() {
   return (
     <PageWrapper>
-      <div className="pt-16">
+      <div className=" pt:8 md:pt-16">
         <HomePage/>
         <AboutSection/>
         <ProductSection/>
