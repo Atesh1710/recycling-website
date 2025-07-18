@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-
+import AluminiumAlloyIngots from '../assets/AluminiumAlloyIngots.jpeg';
+import PETPlasticGranules from '../assets/PETPlasticGranules.avif';
+import FerrousNonFerrousScrap from '../assets/FerrousNonFerrousScrap.jpg';
 const products = [
-  { title: "Industrial Castings", img: "https://images.unsplash.com/photo-1697281679290-ad7be1b10682?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { title: "Machinery Parts", img: "https://plus.unsplash.com/premium_photo-1682144741954-3a9dcea81dd2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-  { title: "Automotive Components", img: "https://images.unsplash.com/photo-1727413433599-496949ef8196?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { title: "Aluminium Alloy Ingots", img:AluminiumAlloyIngots },
+  { title: "PET Plastic Granules", img: PETPlasticGranules },
+  { title: "Ferrous/ Non ferrous scrap", img: FerrousNonFerrousScrap },
 ];
 
 export default function ProductsSection() {

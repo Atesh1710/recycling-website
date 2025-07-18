@@ -89,7 +89,7 @@ export default function HomePage() {
       </section>
 
       <footer className="bg-gray-900 text-center py-6">
-        &copy; {new Date().getFullYear()} | Aluminium & Iron Recycling Company
+        &copy; 2022 | Aluminium & Iron Recycling Company
       </footer>
     </div>
   );
