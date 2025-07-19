@@ -3,9 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TeamMemberModal from '../components/TeamMemberModal';
 import PageWrapper from "../components/PageWrapper";
-import yogeshPic from  '../assets/yogeshPic.jpg';
-import parthPic from '../assets/parthPic.jpg'
-
+import defaultAvatar from '../assets/defaultAvatar.jpg'
 export default function About() {
   const [selectedMember, setSelectedMember] = useState(null);
   return (
@@ -85,7 +83,7 @@ export default function About() {
               {testimonials.map((testi, idx) => (
                 <motion.div key={idx} whileHover={{ scale: 1.05 }} className="bg-gray-50 p-6 rounded-lg shadow max-w-sm text-gray-800">
                   <p className="italic">"{testi.quote}"</p>
-                  <p className="mt-4 text-sm font-semibold">{testi.name}, {testi.company}</p>
+                  <p className="mt-4 text-sm font-semibold">{testi.name} {testi.company}</p>
                 </motion.div>
               ))}
             </div>
@@ -184,17 +182,17 @@ const processSteps = [
 ];
 
 const team = [
-  { name: "Parth Patel", role: "Chairman", photo: parthPic, details: "Parth oversees the strategic direction of the company with a focus on sustainability.",email: "parth.patel@example.com",
+  { name: "Parth Patel", role: "Chairman", photo: defaultAvatar, details: "Parth oversees the strategic direction of the company with a focus on sustainability.",email: "parth.patel@example.com",
     phone: "+91 9770204740",linkedin:"https://www.linkedin.com/in/parth-patel-b397082b5/" },
-  { name: "Yogesh Kapse", role: "Director", photo: yogeshPic, details: "Yogesh drives innovation in recycling processes and technology deployment.",  email: "yogesh.kapse@example.com",
+  { name: "Yogesh Kapse", role: "Director", photo: defaultAvatar, details: "Yogesh drives innovation in recycling processes and technology deployment.",  email: "yogesh.kapse@example.com",
     phone: "+91 6265601919", linkedin:"https://www.linkedin.com/in/yogesh-kapse-b397082b5/" },
-  { name: "Dhayay Patel", role: "Mananging Director", photo: "https://via.placeholder.com/150", details: "Dhayay ensures operational excellence and community engagement.",  email: "dhayay.patel@example.com",
+  { name: "Dhayay Patel", role: "Mananging Director", photo: defaultAvatar, details: "Dhayay ensures operational excellence and community engagement.",  email: "dhayay.patel@example.com",
     phone: "+91 1111111111", linkedin:"https://www.linkedin.com/in/dhayay-patel-b397082b5/" }
 ];
 
 const testimonials = [
-  { quote: "Their recycling solutions have transformed our supply chain sustainability efforts.", name: "Vikas Sharma", company: "GreenTech Corp" },
-  { quote: "Reliable and innovative recycling partner for our manufacturing needs.", name: "Priya Nair", company: "EcoMetals Ltd" }
+  { quote: "Their recycling solutions have transformed our supply chain sustainability efforts.", name: "", company: "" },
+  { quote: "Reliable and innovative recycling partner for our manufacturing needs.", name: "", company: "" }
 ];
 
 const certifications = [
