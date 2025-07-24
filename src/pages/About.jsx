@@ -14,7 +14,7 @@ export default function About() {
         <motion.h1 initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-4xl font-bold mb-4">
           About Our Recycling Vision
         </motion.h1>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="max-w-3xl mx-auto text-lg text-gray-300">
+        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="max-w-3xl mx-auto text-lg text-gray-300 pb-5">
           We revolutionize the recycling of non-ferrous metals like aluminium and copper, turning industrial waste into high-value resources that drive sustainability and circular economy.
         </motion.p>
       </section>
