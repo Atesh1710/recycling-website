@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import TeamMemberModal from '../components/TeamMemberModal';
 import PageWrapper from "../components/PageWrapper";
 import defaultAvatar from '../assets/defaultAvatar.jpg'
+import certificate from '../assets/certificate.jpg';
 export default function About() {
   const [selectedMember, setSelectedMember] = useState(null);
   return (
@@ -75,7 +76,7 @@ export default function About() {
             </div>
           </Section>
           {/* Modal */}
-      <TeamMemberModal member={selectedMember} onClose={() => setSelectedMember(null)} />
+          <TeamMemberModal member={selectedMember} onClose={() => setSelectedMember(null)} />
 
           {/* Testimonials */}
           <Section title="What Our Partners Say" bg="bg-transparent" textColor="text-white">
@@ -91,31 +92,38 @@ export default function About() {
 
           {/* Certifications */}
           <Section title="Certifications & Recognitions" bg="bg-transparent" textColor="text-white">
-            <div className="flex flex-wrap justify-center gap-8">
-              {certifications.map((cert, idx) => (
-                <img key={idx} src={cert.image} alt={cert.name} className="w-32 h-32 object-contain" />
-              ))}
+            <div className="flex justify-center">
+              <div className="w-full sm:w-[300px] md:w-[400px] lg:w-[500px] px-4">
+                <img
+                  src={certificate}
+                  alt="certificate"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
             </div>
           </Section>
+
+
+
 
         </div>
       </div>
 
       {/* Impact / Achievements */}
-      <Section title="Our Achievements"  bg="bg-gray-900" text="text-center text-white">
+      <Section title="Our Achievements" bg="bg-gray-900" text="text-center text-white">
         <div className="flex flex-wrap justify-center gap-8">
-          <StatCard number="100K+" label="Tons of Waste Processed" />
-          <StatCard number="50K+" label="Carbon Credits Earned" />
-          <StatCard number="200+" label="Industry Partners" />
+          <StatCard number="50K+" label="Tons of Waste Processed" />
+          <StatCard number="20K+" label="Carbon Credits Earned" />
+          <StatCard number="20+" label="Industry Partners" />
         </div>
       </Section>
 
-      {/* CTA */}
+      {/* CTA k*/}
       <Section title="Partner with Us for a Sustainable Future">
         <Link to='/contact'>
-        <button className="mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2 px-6 rounded-xl">
-          Contact Us
-        </button>
+          <button className="mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2 px-6 rounded-xl">
+            Contact Us
+          </button>
         </Link>
       </Section>
 
@@ -182,12 +190,18 @@ const processSteps = [
 ];
 
 const team = [
-  { name: "Parth Patel", role: "Chairman", photo: defaultAvatar, details: "Parth oversees the strategic direction of the company with a focus on sustainability.",email: "parth.patel@example.com",
-    phone: "+91 9770204740",linkedin:"https://www.linkedin.com/in/parth-patel-b397082b5/" },
-  { name: "Yogesh Kapse", role: "Director", photo: defaultAvatar, details: "Yogesh drives innovation in recycling processes and technology deployment.",  email: "yogesh.kapse@example.com",
-    phone: "+91 6265601919", linkedin:"https://www.linkedin.com/in/yogesh-kapse-b397082b5/" },
-  { name: "Dhayay Patel", role: "Mananging Director", photo: defaultAvatar, details: "Dhayay ensures operational excellence and community engagement.",  email: "dhayay.patel@example.com",
-    phone: "+91 1111111111", linkedin:"https://www.linkedin.com/in/dhayay-patel-b397082b5/" }
+  {
+    name: "Parth Patel", role: "Chairman", photo: defaultAvatar, details: "Parth oversees the strategic direction of the company with a focus on sustainability.", email: "parth.patel@example.com",
+    phone: "+91 9770204740", linkedin: "https://www.linkedin.com/in/parth-patel-b397082b5/"
+  },
+  {
+    name: "Yogesh Kapse", role: "Director", photo: defaultAvatar, details: "Yogesh drives innovation in recycling processes and technology deployment.", email: "yogesh.kapse@example.com",
+    phone: "+91 6265601919", linkedin: "https://www.linkedin.com/in/yogesh-kapse-b397082b5/"
+  },
+  {
+    name: "Dhayay Patel", role: "Mananging Director", photo: defaultAvatar, details: "Dhayay ensures operational excellence and community engagement.", email: "dhayay.patel@example.com",
+    phone: "+91 1111111111", linkedin: "https://www.linkedin.com/in/dhayay-patel-b397082b5/"
+  }
 ];
 
 const testimonials = [

@@ -23,7 +23,7 @@ function AluminiumIngot({ position }) {
 export default function MetalShowcase() {
   return (
     <section className="py-16 px-4 bg-gray-800 text-center text-white">
-      <h2 className="text-3xl md:text-4xl font-bold mb-8">Aluminium Alloy Ingot Pyramid</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-8">Aluminium Alloy Ingot</h2>
       <div className="h-96">
         <Canvas camera={{ position: [0, 1, 5] }}>
           <ambientLight intensity={0.5} />
